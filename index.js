@@ -2,6 +2,7 @@ const searchButton = document.getElementById("search");
 const description = document.getElementById("description");
 const locationName = document.getElementById("location-name");
 const temperature = document.getElementById("temperature");
+const weather = document.getElementById("weather");
 
 function farToCel(degree) {
     return Math.ceil(degree - 273.15) + "°C";
@@ -19,10 +20,22 @@ async function searchLocation() {
     console.log(locationInfo);
 
     description.innerHTML = locationInfo.weather[0].description;
-    locationName.innerHTML = locationInfo.name;
+    locationName.innerHTML = `${locationInfo.name}, ${locationInfo.sys.country}`;
     temperature.innerHTML = farToCel(locationInfo.main.temp);
+    weather.innerHTML = locationInfo.weather[0].main;
 }
 
 searchButton.addEventListener('click', () => {
     searchLocation();
 })
+
+async function original() {
+    let locationInfo = await callWeatherAPI("Montreal");
+
+    description.innerHTML = locationInfo.weather[0].description;
+    locationName.innerHTML = `${locationInfo.name}, ${locationInfo.sys.country}`
+    temperature.innerHTML = farToCel(locationInfo.main.temp);
+    weather.innerHTML = locationInfo.weather[0].main;
+}
+
+original();

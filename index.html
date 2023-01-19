@@ -9,19 +9,46 @@
 </head>
 <body>
     <div class="container">
-        <div class="left">
-            <h3 id="description">Description</h3>
-            <h1 id="location-name">Location</h1>
-            <h1 id="temperature">Temperature</h1>
+        <div class="header">
+            <h1 class="title">Weather App</h1>
         </div>
-        <div class="right">
-            
+
+        <div class="top">
+            <div class="search-bar">
+                <input type="text" id="location" placeholder="Search Location...">
+                <button id="search">Search</button>
+            </div>
         </div>
+        
+
+        <div class="middle">
+            <div class="card">
+                <div class="middle-top">
+                    <div class="left">
+                        <p id="temperature"></p>
+                        <p id="location-name"></p>
+                    </div>
+                    
+                    <div class="right">
+                        <p id="weather"></p>
+                        <p id="description"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <label>Search Location...</label>
-    <input type="text" id="location">
-    <button id="search">Search</button>
     
+    <footer class="footer">
+        <p>
+          Copyright ©
+          <script>
+            document.write(new Date().getFullYear())
+          </script>
+          Thomas Huy Nguyen
+        </p>
+      </footer>
+      
     <script src="index.js"></script>
 </body>
 </html>

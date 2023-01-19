@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #e5ebeb;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header {
+    height: 100px;
+    background-color: #293241;
+    text-align: center;
+}
+
+.title {
+    padding: 10px 0 0 0;
+    color: white;
+    
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    margin: 10px;
+    padding: 30px 0 0 0;
+    height: 75px;
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Infos */
+
+#location {
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+#search {
+    height: 36px;
+    border-radius: 10px;
+}
+
+#temperature, #weather {
+    font-size: 50px;
+    margin: 50px 0 0 0;
+}
+
+/* Middle */
+
+.middle {
+    display: flex;
+    justify-content: center;
+}
+
+.middle-top {
+    display: flex;
+    justify-self: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 30%);
+    width: 600px;
+    height: 200px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.3);
+
+}
+
+.right {
+    border-left: solid black;
+}
+
+.left, .right{
+    width: 300px;
+    text-align: center;
+}
+
+/* Footer */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+  }
